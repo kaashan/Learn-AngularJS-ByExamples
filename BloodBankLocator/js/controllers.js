@@ -1,12 +1,10 @@
 var appControllers = angular.module('appControllers', []);
 
 appControllers.controller('MainController',['$scope','$http', function($scope,$http){
-	var self = $scope;
-	var url = 'https://data.gov.in/api/datastore/resource.json?resource_id=e16c75b6-7ee6-4ade-8e1f-2cd3043ff4c9&api-key=317c2c3b801ff9afdc0e9a3b36249b47';
-	
+	$scope.url = 'https://data.gov.in/api/datastore/resource.json?resource_id=e16c75b6-7ee6-4ade-8e1f-2cd3043ff4c9&api-key=317c2c3b801ff9afdc0e9a3b36249b47';
 	
 	$scope.findBanks = function(){
-		var self = $scope;
+		var self = $scope, url = $scope.url;
 		if($scope.state){
 			url = url + "&filters[state]="+ $scope.state;
 		}
@@ -17,6 +15,7 @@ appControllers.controller('MainController',['$scope','$http', function($scope,$h
 		$http.get(url).then(function(response) {
 			if(response.data.records.length){
 				self.listData = response.data.records;
+				self.noRecordsFound = false;
 			}else{
 				self.noRecordsFound = true;
 			}
@@ -37,6 +36,7 @@ appControllers.controller('MainController',['$scope','$http', function($scope,$h
 		        cityList.appendChild(option);
 	      });
 		});
+		$scope.city = "";
 	}
 
 	$scope.clearList = function(node){
@@ -45,10 +45,4 @@ appControllers.controller('MainController',['$scope','$http', function($scope,$h
 		}
 	}	
 
-}])
-.controller('BloodBankListController',['$rootScope','$scope','$http', function($rootScope,$scope,$http){
-
-	/*$http.get($scope.url).then(function(response) {
-		self.listData = response.data.records;
-	});*/
 }]);
