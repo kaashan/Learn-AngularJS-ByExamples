@@ -2,8 +2,7 @@ angular.module('bloodBankApp',['appControllers','ui.router'])
 	.config(['$stateProvider', function($stateProvider){
 		$stateProvider.state('listBanks',{
 	        url:'/banks',
-	        templateUrl:'views/listEntries.html',
-	        controller:'BloodBankListController'
+	        templateUrl:'views/listEntries.html'
 	    });
 	}])
 	.run(function($rootScope, $http){
