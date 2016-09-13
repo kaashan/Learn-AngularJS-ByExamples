@@ -1,0 +1,9 @@
+[
+   {"id": "0", "name": "", "city": "Select a city"},
+   {"id": "1", "name": "Jaipur", "city": "Jaipur"},
+   {"id": "2", "name": "Jodhpur", "city": "Jodhpur"},
+   {"id": "3", "name": "Udaipur", "city": "Udaipur"},
+   {"id": "4", "name": "Pratapgarh", "city": "Pratapgarh"},
+   {"id": "5", "name": "Hanumangarh", "city": "Hanumangarh"},
+   {"id": "6", "name": "Jaisalmer", "city": "Jaisalmer"}
+]
