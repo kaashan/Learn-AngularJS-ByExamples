@@ -1,0 +1,9 @@
+[
+   {"id": "0", "name": "", "city": "Select a city"},
+   {"id": "1", "name": "Delhi", "city": "Delhi"},
+   {"id": "2", "name": "Kamla Nagar", "city": "Kamla Nagar"},
+   {"id": "3", "name": "Dwarka", "city": "Dwarka"},
+   {"id": "4", "name": "Janakpuri", "city": "Janakpuri"},
+   {"id": "5", "name": "Kalkaji", "city": "Kalkaji"},
+   {"id": "6", "name": "Uttam Nagar", "city": "Uttam Nagar"}
+]

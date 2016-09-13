@@ -1,0 +1,13 @@
+body{
+	background-color: #edfbcf;
+}
+
+.table tr td:nth-child(odd){
+    width:30%;
+}
+.table thead{
+	background-color: #ecbfa2;
+}
+.dropdown{
+	width:300px;
+}

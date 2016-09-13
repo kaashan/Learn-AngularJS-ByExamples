@@ -1,0 +1,10 @@
+[
+   {"id": "1", "name": "AP", "state": "Andhra Pradesh"},
+   {"id": "2", "name": "DL", "state": "Delhi"},
+   {"id": "3", "name": "HP", "state": "Himachal Pradesh"},
+   {"id": "4", "name": "JK", "state": "Jammu and Kashmir"},
+   {"id": "5", "name": "KA", "state": "Karnataka"},
+   {"id": "6", "name": "MH", "state": "Maharashtra"},
+   {"id": "8", "name": "RJ", "state": "Rajasthan"},
+   {"id": "9", "name": "UP", "state": "Uttar Pradesh"}
+]
