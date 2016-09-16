@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label for="cityDrpdwn">Select City:</label>
                     <select ng-disabled="form.$pristine" id="cityDrpdwn" class="form-control dropdown" ng-model="city">
-                        <option value="">Select state first..</option>
+                        <option value="">Select state first</option>
                     </select>
                 </div>
                 <a ng-disabled="form.$pristine" ui-sref="listBanks" class="btn btn-primary" role="button" data-ng-click="findBanks()">Locate Banks</a>
@@ -30,7 +30,7 @@
         </div>
         <div class="row top-buffer">
             <div class="col-xs-8 col-xs-offset-2">
-                <div ui-view><i>Search Results will be loaded below</i></div>
+                <div ui-view><i>Search results will be loaded below</i></div>
             </div>
         </div>
     </div>
