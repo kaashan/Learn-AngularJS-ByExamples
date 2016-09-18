@@ -1,4 +1,4 @@
-angular.module('bloodBankApp',['appControllers','appServices','ui.router'])
+angular.module('bloodBankApp',['appControllers','appServices', 'ui.router','ui.bootstrap'])
 	.config(['$stateProvider', function($stateProvider){
 		$stateProvider.state('listBanks',{
 	        url:'/banks',
@@ -16,6 +16,7 @@ angular.module('bloodBankApp',['appControllers','appServices','ui.router'])
 				console.log('some error occurred');
 			}
 		);
+
 	});
 
 

@@ -1,24 +1,36 @@
-<div ng-show="noRecordsFound">
+<div ng-hide="resultsFound">
     Sorry! No blood banks found for your selection. Change filters and try again.
 </div>
-<table ng-hide="noRecordsFound" class="table table-bordered">
-    <caption><h3>Blood Banks</h3></caption>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>Address</th>
-            <th>Pincode</th>
-            <th>Contact</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="info" ng-repeat="item in listData | limitTo:10">
-            <td>{{item.h_name}}</td>
-            <td>{{item.city}}</td>
-            <td>{{item.address}}</td>
-            <td>{{item.pincode}}</td>
-            <td>{{item.contact}}</td>
-        </tr>
-    </tbody>
-</table>
+<div ng-show="resultsFound">
+    <table class="table table-bordered">
+        <caption><h3>Blood Banks</h3></caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="info" ng-repeat="item in data.filteredData">
+                <td>{{item.h_name}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.pincode}}</td>
+                <td>{{item.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row top-buffer"  data-ng-controller="PaginatorController">
+        <div class="col-xs-8 col-xs-offset-3">
+            <pagination
+              ng-model="currentPage"
+              total-items="data.listData.length"
+              max-size="maxSize"  
+              boundary-links="true">
+            </pagination>
+        </div>
+    </div>
+</div>
