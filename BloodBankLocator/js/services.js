@@ -9,7 +9,7 @@ servicesModule.service('JSONService', ['$http', function($http){
 		data.forEach(function(item) {
 	        var option = document.createElement('option');
 	        option.value = item[value];
-			var optionTxt = document.createTextNode(item[value]);
+		var optionTxt = document.createTextNode(item[value]);
 	        option.appendChild(optionTxt);
 	        parentNode.appendChild(option);
 	     });
